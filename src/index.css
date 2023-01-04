@@ -1,9 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Mitr', sans-serif;
+	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@layer base {
+	body {
+		@apply text-text;
+		@apply bg-bg;
+	}
 }
