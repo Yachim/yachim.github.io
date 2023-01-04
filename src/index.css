@@ -18,4 +18,51 @@
 		@apply text-text;
 		@apply bg-bg;
 	}
+
+	a:focus-visible {
+		outline: none;
+	}
+
+	a:focus-visible:not(:where(.router-link-active, .rounded-link, :hover)) {
+		@apply text-focus;
+	}
+}
+
+@layer utilities {
+	.link {
+		display: inline-block;
+		position: relative;
+		transition: color 150ms ease-in-out;
+	}
+
+	.link::after {
+		@apply bg-accent;
+
+		content: "";
+
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		width: 100%;
+		height: 2px;
+
+		transform-origin: bottom right;
+		scale: 0 1;
+
+		transition: scale 300ms ease-in-out;
+	}
+
+	.link:hover::after {
+		scale: 1 1;
+		transform-origin: bottom left;
+	}
+
+	.link.router-link-active {
+		@apply text-accent;
+	}
+
+	.rounded-link:focus-visible:not(:where(.router-link-active, :hover)) {
+		@apply bg-focus;
+	}
 }

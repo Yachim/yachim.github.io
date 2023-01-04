@@ -8,7 +8,8 @@ module.exports = {
 	colors: {
 		text: "hsl(150deg, 83%, 95%)",
 		bg: "hsl(150deg, 83%, 2%)",
-		accent: "hsl(150deg, 70%, 40%)"
+		accent: "hsl(150deg, 70%, 40%)",
+		focus: "hsl(150deg, 50%, 60%)"
 	},
     extend: {},
   },
