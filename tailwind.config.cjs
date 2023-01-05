@@ -9,7 +9,8 @@ module.exports = {
 		text: "hsl(150deg, 83%, 95%)",
 		bg: "hsl(150deg, 83%, 2%)",
 		accent: "hsl(150deg, 70%, 40%)",
-		focus: "hsl(150deg, 50%, 60%)"
+		focus: "hsl(150deg, 50%, 60%)",
+		shadow: "hsl(150deg, 27%, 15%)"
 	},
     extend: {
 		width: {

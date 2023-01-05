@@ -1,5 +1,17 @@
+<script lang="ts">
+export default {
+	methods: {
+		seeProjects() {
+			window.scrollTo({
+				top: window.innerHeight,
+				behavior: "smooth"
+			})
+		}
+	}
+}
+</script>
+
 <script setup lang="ts">
-import SeeButton from '../SeeButton.vue';
 import SocialButton from '../SocialButton.vue';
 </script>
 
@@ -24,7 +36,10 @@ import SocialButton from '../SocialButton.vue';
 			Iste explicabo debitis quo dignissimos velit eaque?
 		</p>
 		<div class="row-start-2 row-end-2 col-start-3 col-end-3 flex gap-3">
-			<SeeButton href="" see-text="projects"/>
+			<a @click="seeProjects" href="#projects" class="flex gap-3 items-center justify-self-start transition-seeSkills duration-300 hover:gap-5 py-[auto] px-7 border-accent border-2 rounded-[3rem] hover:bg-accent">
+				See projects
+				<font-awesome-icon icon="fa-solid fa-arrow-right" />
+			</a>
 		</div>
 	</div>
 </div>

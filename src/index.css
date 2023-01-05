@@ -11,6 +11,7 @@
 
 * {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 @layer base {
@@ -86,7 +87,9 @@
 	.social-button svg {
 		@apply aspect-square;
 	}
+}
 
+@layer components {
 	.page-part {
 		@apply w-full h-screen flex justify-center items-center;
 	}
