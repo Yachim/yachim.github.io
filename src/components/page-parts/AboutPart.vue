@@ -10,8 +10,8 @@ import SocialButton from '../SocialButton.vue';
 			<h2 class="text-3xl text-right">Frontend developper</h2>
 		</div>
 		<div class="flex justify-self-end gap-3 col-start-1 col-end-1 row-start-2 row-end-2">
-			<SocialButton title="GitHub" icon="fa-brands fa-github" />
-			<SocialButton title="LinkedIn" icon="fa-brands fa-linkedin" />
+			<SocialButton title="GitHub" icon="fa-brands fa-github" href="https://github.com/Yachim" />
+			<SocialButton title="LinkedIn" icon="fa-brands fa-linkedin" href="https://www.linkedin.com/in/jachym-kohout/" />
 		</div>
 
 		<div class="h-full w-[2px] bg-text row-span-2 col-start-2 col-end-2"></div>
