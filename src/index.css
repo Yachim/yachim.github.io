@@ -26,6 +26,11 @@
 	a:focus-visible:not(:where(.router-link-active, .rounded-link, :hover)) {
 		@apply text-focus;
 	}
+
+	button {
+		font-size: 1rem;
+		@apply text-text;
+	}
 }
 
 @layer utilities {
@@ -64,5 +69,17 @@
 
 	.rounded-link:focus-visible:not(:where(.router-link-active, :hover)) {
 		@apply bg-focus;
+	}
+
+	.social-button {
+		padding: 0.625rem;
+		@apply cursor-pointer;
+		@apply text-2xl rounded-xl border border-text grid place-items-center;
+		@apply hover:bg-text hover:text-bg;
+		@apply transition-colors duration-300;
+	}
+
+	.social-button svg {
+		@apply aspect-square;
 	}
 }

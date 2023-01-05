@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-<header class="w-full flex justify-between items-center p-6">
+<header class="w-full flex justify-between items-center p-6 fixed">
 	<RouterLink class="hover:text-accent transition-colors duration-300" to="/">
 		<h1 class="font-medium text-3xl">Jáchym Kohout</h1>
 	</RouterLink>
