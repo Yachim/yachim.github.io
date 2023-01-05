@@ -24,7 +24,6 @@ import SocialButton from '../SocialButton.vue';
 			Iste explicabo debitis quo dignissimos velit eaque?
 		</p>
 		<div class="row-start-2 row-end-2 col-start-3 col-end-3 flex gap-3">
-			<SeeButton href="" see-text="skills"/>
 			<SeeButton href="" see-text="projects"/>
 		</div>
 	</div>
