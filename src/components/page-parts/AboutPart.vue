@@ -3,7 +3,7 @@ import SocialButton from '../SocialButton.vue';
 </script>
 
 <template>
-<div class="w-full h-screen flex justify-center items-center">
+<div class="page-part">
 	<div class="grid grid-cols-aboutArea grid-rows-aboutArea gap-x-8 gap-y-8">
 		<div class="flex flex-col gap-3 justify-end col-start-1 col-end-1 row-start-1 row-end-1">
 			<h1 class="font-medium text-6xl text-accent text-right">Jáchym Kohout</h1>

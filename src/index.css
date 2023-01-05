@@ -82,4 +82,8 @@
 	.social-button svg {
 		@apply aspect-square;
 	}
+
+	.page-part {
+		@apply w-full h-screen flex justify-center items-center;
+	}
 }
