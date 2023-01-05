@@ -16,8 +16,8 @@ export default {
 	methods: {
 		handleScroll() {
 			if (
-				document.body.scrollTop > window.innerHeight || 
-				document.documentElement.scrollTop > window.innerHeight
+				document.body.scrollTop > window.innerHeight / 2 || 
+				document.documentElement.scrollTop > window.innerHeight / 2
 			) {
 				this.showShadow = true;
 			} 
