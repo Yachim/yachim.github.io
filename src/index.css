@@ -19,7 +19,7 @@
 		@apply bg-bg;
 	}
 
-	a:focus-visible {
+	:where(button, a):focus-visible {
 		outline: none;
 	}
 

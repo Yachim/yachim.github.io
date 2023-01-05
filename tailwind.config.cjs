@@ -11,7 +11,21 @@ module.exports = {
 		accent: "hsl(150deg, 70%, 40%)",
 		focus: "hsl(150deg, 50%, 60%)"
 	},
-    extend: {},
+    extend: {
+		width: {
+			par: "50ch"
+		},
+		transitionProperty: {
+			gap: "gap",
+			seeSkills: "gap, background-color"
+		},
+		gridTemplateColumns: {
+			aboutArea: "1fr auto 1fr"
+		},
+		gridTemplateRows: {
+			aboutArea: "1fr auto"
+		}
+	},
   },
   plugins: [],
 }
