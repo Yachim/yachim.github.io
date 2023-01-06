@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { processDescription } from "../utils";
 import SocialButton from "./SocialButton.vue";
 
 // also defined in /src/data/projects.ts
@@ -23,7 +24,7 @@ const props = defineProps<{
 	</a>
 	<div class="flex-[3_1_0%] flex flex-col gap-2">
 		<h3 class="text-accent text-xl">{{props.name}}</h3>
-		<p class="">{{props.description}}</p>
+		<p v-html="processDescription(props.description)" />
 
 		<div class="flex mt-auto gap-2 links">
 			<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />

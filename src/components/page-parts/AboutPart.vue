@@ -13,6 +13,8 @@ export default {
 
 <script setup lang="ts">
 import SocialButton from '../SocialButton.vue';
+import { processDescription } from "../../utils";
+import { bio } from "../../data"
 </script>
 
 <template>
@@ -29,12 +31,8 @@ import SocialButton from '../SocialButton.vue';
 
 		<div class="h-full w-[2px] bg-text row-span-2 col-start-2 col-end-2"></div>
 
-		<p class="w-par row-start-1 row-end-1 col-start-3 col-end-3">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-			Possimus rem consequuntur praesentium expedita! 
-			Doloremque molestiae dolor porro nobis ipsam vitae voluptates illum et? 
-			Iste explicabo debitis quo dignissimos velit eaque?
-		</p>
+		<p v-html="processDescription(bio)" class="w-par row-start-1 row-end-1 col-start-3 col-end-3"/>
+
 		<div class="row-start-2 row-end-2 col-start-3 col-end-3 flex gap-3">
 			<a @click="seeProjects" href="#projects" class="flex gap-3 items-center justify-self-start transition-seeSkills duration-300 hover:gap-5 py-[auto] px-7 border-accent border-2 rounded-[3rem] hover:bg-accent">
 				See projects
