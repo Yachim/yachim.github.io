@@ -1,31 +1,29 @@
 <script lang="ts" setup>
 import SocialButton from "./SocialButton.vue";
 
+// also defined in /src/data/projects.ts
+// importing type from file in Vue component is not possible
+// here I added align
 const props = defineProps<{
 	name: string;
 	description: string;
 	image1: string;
 	image2: string;
-	align: "left" | "right";
 	siteUrl: string;
 	ghUrl: string;
+	align: "left" | "right";
 }>();
 </script>
 
 <template>
-<div :data-align="props.align" class="wrapper flex w-3/5 gap-6">
+<div :data-align="props.align" class="wrapper flex w-full gap-6">
 	<a :href="props.siteUrl" class="image flex-[2_1_0%]" :style="`--img1: url(${image1}); --img2: url(${image2})`">
 		<img class="second-img" :src="props.image2" :alt="`${props.name}'s Second Image`">
 		<img class="first-img" :src="props.image1" :alt="`${props.name}'s First Image`">
 	</a>
 	<div class="flex-[3_1_0%] flex flex-col gap-2">
 		<h3 class="text-accent text-xl">{{props.name}}</h3>
-		<p class="">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-			Maiores quidem nisi nemo! Aut perferendis similique esse possimus dignissimos.
-			Quis error architecto porro praesentium molestiae vitae blanditiis corporis.
-			Alias, esse nemo.
-		</p>
+		<p class="">{{props.description}}</p>
 
 		<div class="flex mt-auto gap-2 links">
 			<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
