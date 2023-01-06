@@ -18,7 +18,7 @@ const props = defineProps<{
 
 <template>
 <div :data-align="props.align" class="wrapper flex w-full gap-6">
-	<a :href="props.siteUrl" class="image flex-[2_1_0%]" :style="`--img1: url(${image1}); --img2: url(${image2})`">
+	<a target="_blank" :href="props.siteUrl" class="image flex-[2_1_0%]" :style="`--img1: url(${image1}); --img2: url(${image2})`">
 		<img class="second-img" :src="props.image2" :alt="`${props.name}'s Second Image`">
 		<img class="first-img" :src="props.image1" :alt="`${props.name}'s First Image`">
 	</a>
