@@ -5,7 +5,7 @@ import { ProjectsData } from "../../data";
 
 <template>
 <a id="projects" name="projects" class="scroll-mt-32" />
-<div class="page-part h-auto flex-col gap-10">
+<div class="page-part h-auto flex-col gap-10 pb-8">
 	<h2 class="text-3xl">Projects</h2>
 	<div class="flex flex-col gap-10 items-center w-3/5">
 		<ProjectItem
