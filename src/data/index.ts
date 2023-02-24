@@ -1,7 +1,9 @@
-import ProjectsData from "./projects";
+import projectsData from "./projects";
+import otherProjectsData from "./otherProjects";
 import bio from "./bio";
 
 export {
-	ProjectsData,
+	projectsData,
+	otherProjectsData,
 	bio
 };

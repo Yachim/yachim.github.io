@@ -17,21 +17,23 @@ const props = defineProps<{
 </script>
 
 <template>
-<div :data-align="props.align" class="wrapper flex w-full gap-6">
-	<a target="_blank" :href="props.siteUrl" class="image flex-[2_1_0%]" :style="`--img1: url(${image1}); --img2: url(${image2})`">
-		<img class="second-img" :src="props.image2" :alt="`${props.name}'s Second Image`">
-		<img class="first-img" :src="props.image1" :alt="`${props.name}'s First Image`">
-	</a>
-	<div class="flex-[3_1_0%] flex flex-col gap-2">
-		<h3 class="text-accent text-xl">{{props.name}}</h3>
-		<p v-html="processDescription(props.description)" />
+	<div :data-align="props.align" class="wrapper flex w-full gap-6">
+		<a target="_blank" :href="props.siteUrl" class="image flex-[2_1_0%]"
+			:style="`--img1: url(${image1}); --img2: url(${image2})`">
+			<img class="second-img" :src="props.image2" :alt="`${props.name}'s Second Image`">
+			<img class="first-img" :src="props.image1" :alt="`${props.name}'s First Image`">
+		</a>
+		<div class="flex-[3_1_0%] flex flex-col gap-2">
+			<h4 class="text-accent text-xl">{{ props.name }}</h4>
+			<p v-html="processDescription(props.description)" />
 
-		<div class="flex mt-auto gap-2 links">
-			<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
-			<SocialButton :title="`${props.name}'s Site`" icon="fa-solid fa-arrow-up-right-from-square" :href="props.siteUrl" />
+			<div class="flex mt-auto gap-2 links">
+				<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
+				<SocialButton :title="`${props.name}'s Site`" icon="fa-solid fa-arrow-up-right-from-square"
+					:href="props.siteUrl" />
+			</div>
 		</div>
 	</div>
-</div>
 </template>
 
 <style scoped>
@@ -44,7 +46,7 @@ const props = defineProps<{
 	position: relative;
 }
 
-.image > img {
+.image>img {
 	object-fit: cover;
 	border-radius: 0.5rem;
 
@@ -77,7 +79,7 @@ const props = defineProps<{
 	flex-direction: row-reverse;
 }
 
-[data-align="right"] > div {
+[data-align="right"]>div {
 	text-align: right;
 	align-items: end;
 }
