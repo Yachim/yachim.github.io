@@ -14,7 +14,7 @@ import { otherProjectsData } from "../../data";
 				:align="index % 2 ? 'right' : 'left'" />
 		</div>
 		<h3 class="text-2xl">Other projects</h3>
-		<div class="flex flex-row gap-10 overflow-x-auto w-3/4 scrollbar relative pb-5">
+		<div class="flex flex-row justify-center gap-10 overflow-x-auto w-3/4 scrollbar relative pb-5">
 			<OtherProjectItem v-for="(project, index) in otherProjectsData" v-bind:key="index" v-bind="project" />
 		</div>
 	</div>
