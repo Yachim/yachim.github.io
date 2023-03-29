@@ -1,7 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	app: {
+		head: {
+			base: {
+				href: "./"
+			}
+		}
+	},
 	css: [
-		'@/assets/css/main.css',
 		'@fortawesome/fontawesome-svg-core/styles.css'
 	],
 	postcss: {
@@ -10,5 +16,5 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
-	modules: ['@nuxt/content'],
+	modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
 })
