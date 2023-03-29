@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-import { RouterLink } from 'vue-router';
-</script>
-
 <script lang="ts">
 export default {
 	data() {
@@ -9,10 +5,10 @@ export default {
 			showShadow: false
 		}
 	},
-	created() {
+	beforeMount() {
 		window.addEventListener('scroll', this.handleScroll);
 	},
-	unmounted() {
+	beforeUnmount() {
 		window.removeEventListener('scroll', this.handleScroll);
 	},
 	methods: {
@@ -26,12 +22,6 @@ export default {
 			else {
 				this.showShadow = false;
 			}
-		},
-		scrollTop() {
-			window.scrollTo({
-				top: 0,
-				behavior: "smooth"
-			})
 		}
 	}
 }
@@ -39,22 +29,17 @@ export default {
 
 <template>
 	<header :data-scrolled="showShadow" ref="header" class="w-full flex justify-between items-center p-6 fixed bg-bg">
-		<RouterLink class="hover:text-accent transition-colors duration-300" to="/" @click="scrollTop">
+		<NuxtLink class="hover:text-accent transition-colors duration-300" to="/#top">
 			<h1 class="font-medium text-3xl">Jáchym Kohout</h1>
-		</RouterLink>
+		</NuxtLink>
 		<nav class="flex gap-7 items-center">
-			<RouterLink class="link" to="/blog">
+			<NuxtLink class="link" to="/blog">
 				Blog
-			</RouterLink>
+			</NuxtLink>
 			<div class="flex items-center border-accent border-2 rounded-[3rem] overflow-hidden">
 				<a class="p-3 px-7 border-r border-r-accent transition-colors hover:bg-accent duration-300 rounded-link"
 					href="mailto:jachym.kohout@gmail.com" target="_blank">
 					Email Me
-				</a>
-				<a class="p-3 px-7 border-l border-l-accent transition-colors hover:bg-accent duration-300 flex gap-2 items-center rounded-link"
-					href="/cv" target="_blank">
-					<font-awesome-icon icon="fa-solid fa-floppy-disk" />
-					CV
 				</a>
 			</div>
 		</nav>

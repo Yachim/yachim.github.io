@@ -1,13 +1,6 @@
 <script lang="ts" setup>
-import { processDescription } from "../utils";
-import SocialButton from "./SocialButton.vue";
-
-// also defined in /src/data/projects.ts
-// importing type from file in Vue component is not possible
-// here I added align
 const props = defineProps<{
 	name: string;
-	description: string;
 	image1: string;
 	image2: string;
 	siteUrl: string;
@@ -25,7 +18,7 @@ const props = defineProps<{
 		</a>
 		<div class="flex-[3_1_0%] flex flex-col gap-2">
 			<h4 class="text-accent text-xl">{{ props.name }}</h4>
-			<p v-html="processDescription(props.description)" />
+			<slot />
 
 			<div class="flex mt-auto gap-2 links">
 				<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />

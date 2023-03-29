@@ -1,12 +1,6 @@
 <script lang="ts" setup>
-import { processDescription } from "../utils";
-import SocialButton from "./SocialButton.vue";
-
-// also defined in /src/data/otherProjects.ts
-// importing type from file in Vue component is not possible
 const props = defineProps<{
 	name: string;
-	description: string;
 	image: string;
 	siteUrl: string;
 	ghUrl: string;
@@ -29,7 +23,7 @@ const props = defineProps<{
 					icon="fa-solid fa-arrow-up-right-from-square" :href="props.siteUrl" />
 			</div>
 		</div>
-		<p v-html="processDescription(props.description)" />
+		<slot />
 	</div>
 </template>
 

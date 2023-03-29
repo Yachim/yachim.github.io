@@ -26,3 +26,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# Nuxt dev/build outputs
+.output
+.nuxt
