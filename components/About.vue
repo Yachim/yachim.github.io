@@ -16,16 +16,17 @@
 			<div class="h-full w-[2px] bg-text row-span-2 col-start-2 col-end-2"></div>
 
 			<p class="w-par row-start-1 row-end-1 col-start-3 col-end-3">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptate ipsa magnam porro,
-				harum laborum ipsam nam dolorem quisquam recusandae odio quis assumenda error inventore atque velit
-				neque quidem asperiores!
+				I am passionate about building web apps. I love building user interfaces and learning new concepts in
+				the process.
 			</p>
 
 			<div class="row-start-2 row-end-2 col-start-3 col-end-3 flex gap-3">
 				<a href="#projects"
 					class="flex gap-3 items-center justify-self-start transition-seeSkills duration-300 hover:gap-5 py-[auto] px-7 border-accent border-2 rounded-[3rem] hover:bg-accent">
 					See projects
-					<font-awesome-icon icon="fa-solid fa-arrow-right" />
+					<ClientOnly>
+						<font-awesome-icon icon="fa-solid fa-arrow-right" />
+					</ClientOnly>
 				</a>
 			</div>
 		</div>

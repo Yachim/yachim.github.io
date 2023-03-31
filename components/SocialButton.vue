@@ -7,7 +7,9 @@ const props = defineProps<{
 </script>
 
 <template>
-	<a :title="props.title" class="social-button" :href="props.href" target="_blank" >
-		<font-awesome-icon :icon="props.icon" />
+	<a :title="props.title" class="social-button" :href="props.href" target="_blank">
+		<ClientOnly>
+			<font-awesome-icon :icon="props.icon" />
+		</ClientOnly>
 	</a>
 </template>
