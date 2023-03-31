@@ -4,11 +4,12 @@ const props = defineProps<{
 	image: string;
 	siteUrl: string;
 	ghUrl: string;
+	order: number;
 }>();
 </script>
 
 <template>
-	<div class="flex flex-col gap-3 project-wrapper w-[25ch]">
+	<div :style="{ '--order': order }" class="wrapper flex flex-col gap-3 w-[25ch]">
 		<div class="relative">
 			<h4 class="text-accent text-xl absolute p-2 w-full h-1/2 bg-gradient-to-b from-bg">
 				{{
@@ -28,7 +29,15 @@ const props = defineProps<{
 </template>
 
 <style scoped>
-.project-wrapper:hover .icons {
+.wrapper:hover .icons {
 	opacity: 1;
+}
+
+.wrapper {
+	opacity: 0;
+}
+
+.visible {
+	animation: load 1200ms calc(var(--order) * 300ms) forwards ease-in-out;
 }
 </style>

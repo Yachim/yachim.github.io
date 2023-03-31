@@ -6,11 +6,12 @@ const props = defineProps<{
 	siteUrl: string;
 	ghUrl: string;
 	align: "left" | "right";
+	order: number;
 }>();
 </script>
 
 <template>
-	<div :data-align="props.align" class="wrapper flex w-full gap-6">
+	<div :data-align="props.align" class="wrapper flex w-full gap-6" :style="{ '--order': order }">
 		<a target="_blank" :href="props.siteUrl" class="image flex-[2_1_0%]"
 			:style="`--img1: url(${image1}); --img2: url(${image2})`">
 			<img class="second-img" :src="props.image2" :alt="`${props.name}'s Second Image`">
@@ -88,5 +89,13 @@ const props = defineProps<{
 
 [data-align="right"] .links {
 	flex-direction: row-reverse;
+}
+
+.wrapper {
+	opacity: 0;
+}
+
+.visible {
+	animation: load 1200ms calc(var(--order) * 300ms) forwards ease-in-out;
 }
 </style>

@@ -1,11 +1,48 @@
+<script lang="ts" setup>
+import { ProjectItem, OtherProjectItem } from "#components";
+
+const projects = ref<HTMLDivElement | null>(null);
+const otherProjects = ref<HTMLDivElement | null>(null);
+
+onMounted(() => {
+	const projectsObsFunc = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("visible");
+				observer.unobserve(entry.target);
+			}
+		});
+
+	};
+
+	const otherProjectsObsFunc = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.childNodes.forEach(el => (el as Element).classList.add("visible"));
+				observer.unobserve(entry.target);
+			}
+		});
+
+	};
+
+	const projectsObs = new IntersectionObserver(projectsObsFunc);
+	projects.value!.childNodes.forEach(el => {
+		projectsObs.observe(el as Element);
+	})
+
+	const otherProjectsObs = new IntersectionObserver(otherProjectsObsFunc);
+	otherProjectsObs.observe(otherProjects.value!);
+});
+</script>
+
 <template>
 	<a id="projects" name="projects" class="scroll-mt-32" />
 	<div class="page-part h-auto flex-col gap-10 pb-8">
 		<h2 class="text-3xl">Projects</h2>
-		<div class="flex flex-col gap-10 items-center w-3/5">
+		<div class="flex flex-col gap-10 items-center w-3/5" ref="projects">
 			<ProjectItem name="SfPets" image1="/images/projects/sfpets/pets1.png"
 				image2="/images/projects/sfpets/pets2.png" siteUrl="https://sfpets.yachim.cz"
-				ghUrl="https://github.com/yachim/sfpets" align="left">
+				ghUrl="https://github.com/yachim/sfpets" align="left" :order="0">
 				<p>
 					A helper for the popular online game
 					<span class="emphasized">Shakes & Fidget</span>.
@@ -23,8 +60,9 @@
 			</ProjectItem>
 		</div>
 		<h3 class="text-2xl">Other projects</h3>
-		<div class="flex flex-row justify-center gap-10 overflow-x-auto w-3/4 scrollbar relative pb-5">
-			<OtherProjectItem name="Breaking Bad Quotes Client" image="/images/other_projects/brba.png"
+		<div ref="otherProjects"
+			class="flex flex-row justify-center gap-10 overflow-x-auto w-3/4 scrollbar relative pb-5">
+			<OtherProjectItem :order="0" name="Breaking Bad Quotes Client" image="/images/other_projects/brba.png"
 				siteUrl="https://brba-quotes.yachim.cz/" ghUrl="https://github.com/Yachim/brba-quotes-client">
 				<p>
 					Using the
@@ -38,7 +76,7 @@
 				</p>
 			</OtherProjectItem>
 
-			<OtherProjectItem name="Ascii Tree Builder" image="/images/other_projects/ascii_tree.png"
+			<OtherProjectItem :order="1" name="Ascii Tree Builder" image="/images/other_projects/ascii_tree.png"
 				siteUrl="https://ascii-tree-builder.yachim.cz/" ghUrl="https://github.com/yachim/ascii-tree-builder">
 				<p>
 					An app built in
@@ -50,7 +88,7 @@
 				</p>
 			</OtherProjectItem>
 
-			<OtherProjectItem name="Tower of Hanoi" image="/images/other_projects/hanoi.png"
+			<OtherProjectItem :order="2" name="Tower of Hanoi" image="/images/other_projects/hanoi.png"
 				siteUrl="https://towerofhanoi.yachim.cz/" ghUrl="https://github.com/Yachim/towerofhanoi/">
 				<p>
 					A famous mathematical puzzle called the
