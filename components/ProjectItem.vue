@@ -11,7 +11,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<div :data-align="props.align" class="wrapper flex w-full gap-6" :style="{ '--order': order }">
+	<div :data-align="props.align" class="wrapper flex w-full gap-6 flex-row" :style="{ '--order': order }">
 		<a target="_blank" :href="props.siteUrl" class="image flex-[2_1_0%]"
 			:style="`--img1: url(${image1}); --img2: url(${image2})`">
 			<img class="second-img" :src="props.image2" :alt="`${props.name}'s Second Image`">
@@ -24,7 +24,7 @@ const props = defineProps<{
 				<slot />
 			</p>
 
-			<div class="flex mt-auto gap-2 links">
+			<div class="flex mt-auto pt-6 gap-2 links">
 				<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
 				<SocialButton :title="`${props.name}'s Site`" icon="fa-solid fa-arrow-up-right-from-square"
 					:href="props.siteUrl" />

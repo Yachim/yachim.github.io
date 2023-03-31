@@ -39,7 +39,10 @@ onMounted(() => {
 	<a id="projects" name="projects" class="scroll-mt-32" />
 	<div class="page-part h-auto flex-col gap-10 pb-8">
 		<h2 class="text-3xl">Projects</h2>
-		<div class="flex flex-col gap-10 items-center w-3/5" ref="projects">
+		<div class="
+				flex flex-col gap-10 items-center
+				w-10/12 sm:9/12 md:w-8/12 ld:w-7/12 xl:w-4/5 2xl:w-[70%]
+			" ref="projects">
 			<ProjectItem name="SfPets" image1="/images/projects/sfpets/pets1.png"
 				image2="/images/projects/sfpets/pets2.png" siteUrl="https://sfpets.yachim.cz"
 				ghUrl="https://github.com/yachim/sfpets" align="left" :order="0">

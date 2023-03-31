@@ -107,6 +107,10 @@ html {
 		@apply w-full h-screen flex justify-center items-center;
 	}
 
+	.project-desc p:not(:last-child) {
+		@apply mb-6;
+	}
+
 	.project-desc em {
 		@apply text-accent;
 		@apply not-italic;
