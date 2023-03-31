@@ -37,6 +37,7 @@ const props = defineProps<{
 	cursor: pointer;
 	aspect-ratio: 16/9;
 	position: relative;
+	overflow: hidden;
 }
 
 .image>img {
@@ -48,24 +49,32 @@ const props = defineProps<{
 	left: 0;
 	width: 100%;
 	height: 100%;
+
+	transition-property: opacity, scale;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+
+	--hover-scale: 1.05;
 }
 
 .first-img {
 	opacity: 1;
-	transition: opacity 300ms ease-in-out;
+	scale: 1;
 }
 
 .second-img {
 	opacity: 0;
-	transition: opacity 300ms ease-in-out;
+	scale: 1;
 }
 
-.wrapper:hover .first-img {
+.image:hover .first-img {
 	opacity: 0;
+	scale: var(--hover-scale);
 }
 
-.wrapper:hover .second-img {
+.image:hover .second-img {
 	opacity: 1;
+	scale: var(--hover-scale);
 }
 
 [data-align="right"] {
