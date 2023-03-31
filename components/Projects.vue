@@ -44,61 +44,42 @@ onMounted(() => {
 				image2="/images/projects/sfpets/pets2.png" siteUrl="https://sfpets.yachim.cz"
 				ghUrl="https://github.com/yachim/sfpets" align="left" :order="0">
 				<p>
-					A helper for the popular online game
-					<span class="emphasized">Shakes & Fidget</span>.
-					Once a user reaches certain level, they gain access to a collectible minigame -
-					<span class="emphasized">pets</span>.
-					Each pet has different
-					<span class="emphasized">requirements</span>
-					for it to be collectable.
-					For example, some pets are available at night, others during the day.
-					This app
-					<span class="emphasized">checks the availability</span>
-					and lets the user
-					<span class="emphasized">mark collected pets</span>.
+					The popular online game Shakes & Fidget has a collectible minigame - pets.
+					Each pet has different requirements for it to be collectable.
+					The app tracks these requirements and displays the availability of pets.
+				</p>
+				<p>
+					Built with <em>React</em> and styled with <em>SCSS</em>.
+					The app uses <em>React Context</em> for state management
+					and <em>React Query</em> with <em>Axios</em> for fetching user's data.
 				</p>
 			</ProjectItem>
 		</div>
-		<h3 class="text-2xl">Other projects</h3>
+		<h3 class="text-2xl">Other smaller projects</h3>
 		<div ref="otherProjects"
 			class="flex flex-row justify-center gap-10 overflow-x-auto w-3/4 scrollbar relative pb-5">
 			<OtherProjectItem :order="0" name="Breaking Bad Quotes Client" image="/images/other_projects/brba.png"
 				siteUrl="https://brba-quotes.yachim.cz/" ghUrl="https://github.com/Yachim/brba-quotes-client">
-				<p>
-					Using the
-					<span class="emphasized">React</span>
-					library an
-					<span class="emphasized">API</span>
-					returning a response containing the
-					author and the quote, I created a client that uses
-					<span class="emphasized">React query</span>
-					to fetch a quote and displays it on the client.
-				</p>
+				A <em>React</em> app that uses an
+				<a href="https://github.com/shevabam/breaking-bad-quotes">API</a>
+				to request a quote from the Breaking Bad series.
+				<em>Tailwind CSS</em> was used for styling
+				and <em>React Query</em> with <em>Axios</em> for fetching.
 			</OtherProjectItem>
 
 			<OtherProjectItem :order="1" name="Ascii Tree Builder" image="/images/other_projects/ascii_tree.png"
 				siteUrl="https://ascii-tree-builder.yachim.cz/" ghUrl="https://github.com/yachim/ascii-tree-builder">
-				<p>
-					An app built in
-					<span class="emphasized">Svelte</span>.
-					On the first panel the user can add folders and files. The folders and files can be renamed
-					and rearranged. The other panel updates the ascii output in real time.
-					Real time updates to the UI required the usage of
-					<span class="emphasized">stores</span>.
-				</p>
+				An app for creating ASCII file trees made with <em>Svelte</em>
+				and styled with <em>Tailwind CSS</em>.
+				State management is done with the help of <em>stores</em>.
 			</OtherProjectItem>
 
 			<OtherProjectItem :order="2" name="Tower of Hanoi" image="/images/other_projects/hanoi.png"
 				siteUrl="https://towerofhanoi.yachim.cz/" ghUrl="https://github.com/Yachim/towerofhanoi/">
-				<p>
-					A famous mathematical puzzle called the
-					<span class="emphasized">Tower of Hanoi</span>
-					built in
-					<span class="emphasized">React</span>.
-					The user can change the number of blocks in the
-					puzzle, undo and redo their moves.
-					The game counts user's total number of moves and allows to show all his moves.
-				</p>
+				A famous mathematical puzzle called the
+				<em>Tower of Hanoi</em> built in <em>React</em>.
+				The app is using <em>SCSS</em> for styling.
+				<em>React Context</em> is used for state management.
 			</OtherProjectItem>
 		</div>
 	</div>

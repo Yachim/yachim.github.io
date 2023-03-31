@@ -107,7 +107,13 @@ html {
 		@apply w-full h-screen flex justify-center items-center;
 	}
 
-	.emphasized {
+	.project-desc em {
 		@apply text-accent;
+		@apply not-italic;
+	}
+
+	.project-desc a {
+		@apply text-accent underline;
+		@apply transition-opacity duration-300 hover:opacity-[0.65];
 	}
 }

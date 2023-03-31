@@ -17,14 +17,17 @@ const props = defineProps<{
 				}}</h4>
 			<img class="aspect-video object-cover w-full rounded-lg" :src="props.image" :alt="`${props.name}'s Image`">
 			<div
-				class="absolute flex flex-row gap-2 right-2 bottom-2 opacity-30 transition-opacity duration-300 ease-in-out icons">
+				class="absolute flex flex-row-reverse w-full gap-2 right-0 bottom-0 p-2 opacity-30 transition-opacity duration-300 ease-in-out icons bg-gradient-to-t from-bg">
 				<SocialButton class="bg-bg" :title="`${props.name}'s GitHub`" icon="fa-brands fa-github"
 					:href="props.ghUrl" />
 				<SocialButton class="bg-bg" :title="`${props.name}'s Site`"
 					icon="fa-solid fa-arrow-up-right-from-square" :href="props.siteUrl" />
 			</div>
 		</div>
-		<slot />
+
+		<p class="project-desc">
+			<slot />
+		</p>
 	</div>
 </template>
 

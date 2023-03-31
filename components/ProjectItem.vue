@@ -19,7 +19,10 @@ const props = defineProps<{
 		</a>
 		<div class="flex-[3_1_0%] flex flex-col gap-2">
 			<h4 class="text-accent text-xl">{{ props.name }}</h4>
-			<slot />
+
+			<p class="project-desc">
+				<slot />
+			</p>
 
 			<div class="flex mt-auto gap-2 links">
 				<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
