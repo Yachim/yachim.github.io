@@ -36,12 +36,10 @@ export default {
 			<NuxtLink class="link" to="/blog">
 				Blog
 			</NuxtLink>
-			<div class="flex items-center border-accent border-2 rounded-[3rem] overflow-hidden">
-				<a class="p-3 px-7 border-r border-r-accent transition-colors hover:bg-accent duration-300 rounded-link"
-					href="mailto:jachym.kohout@gmail.com" target="_blank">
-					Email Me
-				</a>
-			</div>
+			<a class="border-accent border-2 rounded-[3rem] p-3 px-7 border-r border-r-accent transition-colors hover:bg-accent duration-300 rounded-link"
+				href="mailto:jachym.kohout@gmail.com" target="_blank">
+				Email Me
+			</a>
 		</nav>
 	</header>
 </template>
