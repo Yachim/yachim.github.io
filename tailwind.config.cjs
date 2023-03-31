@@ -20,18 +20,15 @@ module.exports = {
 		},
 		extend: {
 			width: {
-				par: "50ch"
+				par: "35ch"
 			},
 			transitionProperty: {
 				gap: "gap",
 				seeSkills: "gap, background-color"
 			},
 			gridTemplateColumns: {
-				aboutArea: "1fr auto 1fr"
+				aboutArea: "1fr 1fr"
 			},
-			gridTemplateRows: {
-				aboutArea: "1fr auto"
-			}
 		},
 	},
 	plugins: [],
