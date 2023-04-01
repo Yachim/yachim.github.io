@@ -90,9 +90,9 @@ html {
 	}
 
 	.social-button {
-		padding: 0.625rem;
+		@apply w-10 h-10;
 		@apply cursor-pointer;
-		@apply text-2xl rounded-xl border border-text grid place-items-center;
+		@apply text-xl rounded-lg border border-text grid place-items-center;
 		@apply hover:bg-text hover:text-bg;
 		@apply transition-colors duration-300;
 	}

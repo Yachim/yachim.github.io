@@ -37,15 +37,28 @@ module.exports = {
 					"subheading",
 					"socials",
 					"projects-button"
+				],
+				project: [
+					"img name links",
+					"img desc desc",
+				],
+				projectMobile: [
+					"img img",
+					"name links",
+					"desc desc"
 				]
 			},
 			gridTemplateColumns: {
 				about: "1fr 1fr",
-				aboutMobile: "1fr"
+				aboutMobile: "1fr",
+				project: "3fr 4fr auto",
+				projectMobile: "1fr auto"
 			},
 			gridTemplateRows: {
 				about: "repeat(3, auto)",
-				aboutMobile: "repeat(4, auto)"
+				aboutMobile: "repeat(4, auto)",
+				project: "2.5rem auto",
+				projectMobile: "repeat(3, auto)",
 			}
 		},
 	},
