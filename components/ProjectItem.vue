@@ -23,7 +23,7 @@ const props = defineProps<{
 
 		<h4 class="grid-in-name text-accent text-xl">{{ props.name }}</h4>
 
-		<p class="grid-in-desc">
+		<p class="project-desc grid-in-desc">
 			<slot />
 		</p>
 
