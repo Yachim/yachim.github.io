@@ -38,9 +38,13 @@ module.exports = {
 					"socials",
 					"projects-button"
 				],
-				project: [
+				projectLeft: [
 					"img name links",
 					"img desc desc",
+				],
+				projectRight: [
+					"links name img",
+					"desc desc img",
 				],
 				projectMobile: [
 					"img img",
@@ -51,7 +55,8 @@ module.exports = {
 			gridTemplateColumns: {
 				about: "1fr 1fr",
 				aboutMobile: "1fr",
-				project: "3fr 4fr auto",
+				projectLeft: "3fr 4fr auto",
+				projectRight: "auto 4fr 3fr",
 				projectMobile: "1fr auto"
 			},
 			gridTemplateRows: {

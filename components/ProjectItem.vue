@@ -6,16 +6,16 @@ const props = defineProps<{
 	siteUrl: string;
 	ghUrl: string;
 	align: "left" | "right";
-	order: number;
 }>();
 </script>
 
 <template>
 	<div :data-align="props.align" class="wrapper w-full gap-x-6 gap-y-4
 		grid 
-		grid-areas-projectMobile xl:grid-areas-project
-		grid-cols-projectMobile xl:grid-cols-project
-		grid-rows-projectMobile xl:grid-rows-project" :style="{ '--order': order }">
+		grid-areas-projectMobile
+		grid-cols-projectMobile
+		grid-rows-projectMobile xl:grid-rows-project"
+		:class="props.align === 'left' ? 'xl:grid-areas-projectLeft xl:grid-cols-projectLeft' : 'xl:grid-areas-projectRight xl:grid-cols-projectRight'">
 		<a target="_blank" :href="props.siteUrl" class="grid-in-img image flex-[2_1_0%]">
 			<img class="second-img" :src="props.image2" :alt="`${props.name}'s Second Image`">
 			<img class="first-img" :src="props.image1" :alt="`${props.name}'s First Image`">
@@ -23,7 +23,7 @@ const props = defineProps<{
 
 		<h4 class="grid-in-name text-accent text-xl">{{ props.name }}</h4>
 
-		<p class="grid-in-desc project-desc">
+		<p class="grid-in-desc">
 			<slot />
 		</p>
 
@@ -87,7 +87,11 @@ const props = defineProps<{
 	flex-direction: row-reverse;
 }
 
-[data-align="right"]>div {
+[data-align="right"]>h4 {
+	justify-self: end;
+}
+
+[data-align="right"]>p {
 	text-align: right;
 	align-items: end;
 }
@@ -101,6 +105,6 @@ const props = defineProps<{
 }
 
 .visible {
-	animation: load 1200ms calc(var(--order) * 300ms) forwards ease-in-out;
+	animation: load 1200ms 300ms forwards ease-in-out;
 }
 </style>

@@ -45,7 +45,7 @@ onMounted(() => {
 			" ref="projects">
 			<ProjectItem name="SfPets" image1="/images/projects/sfpets/pets1.png"
 				image2="/images/projects/sfpets/pets2.png" siteUrl="https://sfpets.yachim.cz"
-				ghUrl="https://github.com/yachim/sfpets" align="left" :order="0">
+				ghUrl="https://github.com/yachim/sfpets" align="left">
 				<p>
 					The popular online game Shakes & Fidget has a collectible minigame - pets.
 					Each pet has different requirements for it to be available.
