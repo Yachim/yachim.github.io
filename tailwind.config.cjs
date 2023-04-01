@@ -26,10 +26,30 @@ module.exports = {
 				gap: "gap",
 				seeSkills: "gap, background-color"
 			},
-			gridTemplateColumns: {
-				aboutArea: "1fr 1fr"
+			gridTemplateAreas: {
+				about: [
+					"heading heading",
+					"subheading subheading",
+					"socials projects-button"
+				],
+				aboutMobile: [
+					"heading",
+					"subheading",
+					"socials",
+					"projects-button"
+				]
 			},
+			gridTemplateColumns: {
+				about: "1fr 1fr",
+				aboutMobile: "1fr"
+			},
+			gridTemplateRows: {
+				about: "repeat(3, auto)",
+				aboutMobile: "repeat(4, auto)"
+			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@savvywombat/tailwindcss-grid-areas')
+	],
 }
