@@ -48,13 +48,13 @@ onMounted(() => {
 				ghUrl="https://github.com/yachim/sfpets" align="left" :order="0">
 				<p>
 					The popular online game Shakes & Fidget has a collectible minigame - pets.
-					Each pet has different requirements for it to be collectable.
+					Each pet has different requirements for it to be available.
 					The app tracks these requirements and displays the availability of pets.
 				</p>
 				<p>
 					Built with <em>React</em> and styled with <em>SCSS</em>.
 					The app uses <em>React Context</em> for state management
-					and <em>React Query</em> with <em>Axios</em> for fetching user's data.
+					and <em>React Query</em> with <em>Axios</em> for fetching users' data.
 				</p>
 			</ProjectItem>
 		</div>
@@ -66,7 +66,7 @@ onMounted(() => {
 				A <em>React</em> app that uses an
 				<a href="https://github.com/shevabam/breaking-bad-quotes">API</a>
 				to request a quote from the Breaking Bad series.
-				<em>Tailwind CSS</em> was used for styling
+				<em>Tailwind CSS</em> was used for styling,
 				and <em>React Query</em> with <em>Axios</em> for fetching.
 			</OtherProjectItem>
 
@@ -74,15 +74,15 @@ onMounted(() => {
 				siteUrl="https://ascii-tree-builder.yachim.cz/" ghUrl="https://github.com/yachim/ascii-tree-builder">
 				An app for creating ASCII file trees made with <em>Svelte</em>
 				and styled with <em>Tailwind CSS</em>.
-				State management is done with the help of <em>stores</em>.
+				State management was done with the help of <em>stores</em>.
 			</OtherProjectItem>
 
 			<OtherProjectItem :order="2" name="Tower of Hanoi" image="/images/other_projects/hanoi.png"
 				siteUrl="https://towerofhanoi.yachim.cz/" ghUrl="https://github.com/Yachim/towerofhanoi/">
 				A famous mathematical puzzle called the
-				<em>Tower of Hanoi</em> built in <em>React</em>.
-				The app is using <em>SCSS</em> for styling.
-				<em>React Context</em> is used for state management.
+				<em>Tower of Hanoi</em> built with <em>React</em>.
+				The app uses <em>SCSS</em> for styling.
+				<em>React Context</em> was used for state management.
 			</OtherProjectItem>
 		</div>
 	</div>
