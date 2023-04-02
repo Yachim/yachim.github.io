@@ -30,7 +30,8 @@ export default {
 
 <template>
 	<header :data-scrolled="showShadow" ref="header"
-		class="z-10 w-full grid grid-areas-navMobile sm:grid-areas-nav gap-y-6 justify-between items-center p-6 fixed bg-bg">
+		class="z-10 w-full grid grid-areas-navMobile sm:grid-areas-nav justify-between items-center p-6 fixed bg-bg"
+		:class="{ 'gap-y-6': navBarShown }">
 		<NuxtLink class="hover:text-accent transition-colors duration-300 grid-in-heading" to="/#top">
 			<h1 class="font-medium text-3xl">Jáchym Kohout</h1>
 		</NuxtLink>
@@ -76,21 +77,11 @@ header[data-scrolled="true"] {
 
 @media screen and (max-width: 640px) {
 	nav {
-		transform-origin: top center;
-		transition-property: opacity, visibility, translate;
-		transition-duration: 300ms;
-		transition-timing-function: ease-in-out;
-
-		translate: 0 -100%;
-		opacity: 0;
-		visibility: hidden;
+		display: none;
 	}
 
 	#nav-toggle:checked+nav {
-		translate: 0;
-		opacity: 1;
-		visibility: visible;
-
+		display: flex;
 	}
 }
 </style>
