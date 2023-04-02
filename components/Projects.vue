@@ -41,7 +41,7 @@ onMounted(() => {
 		<h2 class="text-3xl">Projects</h2>
 		<div class="
 				flex flex-col gap-10 items-center
-				w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] 2xl:w-[70%]
+				w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] 2xl:w-[70%]
 			" ref="projects">
 			<ProjectItem name="SfPets" image1="/images/projects/sfpets/pets1.png"
 				image2="/images/projects/sfpets/pets2.png" siteUrl="https://sfpets.yachim.cz"
@@ -60,7 +60,7 @@ onMounted(() => {
 		</div>
 		<h3 class="text-2xl">Other smaller projects</h3>
 		<div ref="otherProjects" class="flex justify-start gap-10 overflow-x-auto
-			max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] 2xl:max-w-[70%]
+			max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] 2xl:max-w-[70%]
 			scrollbar relative pb-5">
 			<OtherProjectItem :order="0" name="Breaking Bad Quotes Client" image="/images/other_projects/brba.png"
 				siteUrl="https://brba-quotes.yachim.cz/" ghUrl="https://github.com/Yachim/brba-quotes-client">
