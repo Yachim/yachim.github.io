@@ -120,4 +120,8 @@ html {
 		@apply text-accent underline;
 		@apply transition-opacity duration-300 hover:opacity-[0.65];
 	}
+
+	.debug {
+		outline: 2px solid pink;
+	}
 }

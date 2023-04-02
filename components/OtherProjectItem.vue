@@ -9,7 +9,8 @@ const props = defineProps<{
 </script>
 
 <template>
-	<div :style="{ '--order': order }" class="wrapper flex flex-col gap-3 w-[25ch]">
+	<div :style="{ '--order': order }" class="wrapper flex flex-col gap-3
+	w-[300px] flex-shrink-0">
 		<div class="relative">
 			<h4 class="text-accent text-xl absolute p-2 w-full h-1/2 bg-gradient-to-b from-bg">
 				{{
