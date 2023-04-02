@@ -1,1 +1,0 @@
-import{H as e,I as s,o as c}from"./entry.daa8d027.js";const o={},r={class:"h-screen flex justify-center items-center"};function t(n,_){return c(),s("div",r," Blog is work in progress ")}const i=e(o,[["render",t]]);export{i as default};
