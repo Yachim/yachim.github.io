@@ -1,6 +1,5 @@
 <template>
-	<a id="top" />
-	<div class="page-part">
+	<div id="top" class="page-part">
 		<div
 			class="grid grid-areas-aboutMobile sm:grid-areas-about grid-cols-aboutMobile sm:grid-cols-about grid-rows-aboutMobile sm:grid-rows-about gap-x-8 gap-y-8 place-items-center">
 			<h1 class="grid-in-heading font-medium text-6xl text-accent text-center">Jáchym Kohout</h1>
