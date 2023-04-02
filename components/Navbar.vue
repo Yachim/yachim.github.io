@@ -2,7 +2,8 @@
 export default {
 	data() {
 		return {
-			showShadow: false
+			showShadow: false,
+			navBarShown: false
 		}
 	},
 	beforeMount() {
@@ -28,11 +29,19 @@ export default {
 </script>
 
 <template>
-	<header :data-scrolled="showShadow" ref="header" class="w-full flex justify-between items-center p-6 fixed bg-bg">
-		<NuxtLink class="hover:text-accent transition-colors duration-300" to="/#top">
+	<header :data-scrolled="showShadow" ref="header"
+		class="z-10 w-full grid grid-areas-navMobile sm:grid-areas-nav gap-y-6 justify-between items-center p-6 fixed bg-bg">
+		<NuxtLink class="hover:text-accent transition-colors duration-300 grid-in-heading" to="/#top">
 			<h1 class="font-medium text-3xl">Jáchym Kohout</h1>
 		</NuxtLink>
-		<nav class="flex gap-7 items-center">
+		<label for="nav-toggle" class="px-2 cursor-pointer sm:hidden grid-in-show-nav">
+			<ClientOnly>
+				<font-awesome-icon class="navbar-toggle-icon" :class="{ 'label-checked': navBarShown }"
+					icon="fa-solid fa-chevron-left" />
+			</ClientOnly>
+		</label>
+		<input type="checkbox" class="hidden" id="nav-toggle" name="mobile-nav-visible" v-model="navBarShown" />
+		<nav class="flex gap-7 items-center grid-in-nav justify-between sm:justify-end">
 			<NuxtLink class="link" to="/blog">
 				Blog
 			</NuxtLink>
@@ -54,5 +63,34 @@ header[data-scrolled="true"] {
 	-webkit-box-shadow: 0px 1px 5px 0px theme("colors.shadow");
 	-moz-box-shadow: 0px 1px 5px 0px theme("colors.shadow");
 	box-shadow: 0px 1px 5px 0px theme("colors.shadow");
+}
+
+.navbar-toggle-icon {
+	transition: rotate 300ms ease-in-out;
+	rotate: 0;
+}
+
+.navbar-toggle-icon.label-checked {
+	rotate: -90deg;
+}
+
+@media screen and (max-width: 640px) {
+	nav {
+		transform-origin: top center;
+		transition-property: opacity, visibility, translate;
+		transition-duration: 300ms;
+		transition-timing-function: ease-in-out;
+
+		translate: 0 -100%;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	#nav-toggle:checked+nav {
+		translate: 0;
+		opacity: 1;
+		visibility: visible;
+
+	}
 }
 </style>

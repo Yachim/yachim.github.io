@@ -50,6 +50,13 @@ module.exports = {
 					"img img",
 					"name links",
 					"desc desc"
+				],
+				nav: [
+					"heading nav"
+				],
+				navMobile: [
+					"heading show-nav",
+					"nav nav"
 				]
 			},
 			gridTemplateColumns: {
