@@ -63,26 +63,32 @@ onMounted(() => {
 			class="flex flex-row justify-center gap-10 overflow-x-auto w-3/4 scrollbar relative pb-5">
 			<OtherProjectItem :order="0" name="Breaking Bad Quotes Client" image="/images/other_projects/brba.png"
 				siteUrl="https://brba-quotes.yachim.cz/" ghUrl="https://github.com/Yachim/brba-quotes-client">
-				A <em>React</em> app that uses an
-				<a href="https://github.com/shevabam/breaking-bad-quotes">API</a>
-				to request a quote from the Breaking Bad series.
-				<em>Tailwind CSS</em> was used for styling,
-				and <em>React Query</em> with <em>Axios</em> for fetching.
+				<p>
+					A <em>React</em> app that uses an
+					<a href="https://github.com/shevabam/breaking-bad-quotes">API</a>
+					to request a quote from the Breaking Bad series.
+					<em>Tailwind CSS</em> was used for styling,
+					and <em>React Query</em> with <em>Axios</em> for fetching.
+				</p>
 			</OtherProjectItem>
 
 			<OtherProjectItem :order="1" name="Ascii Tree Builder" image="/images/other_projects/ascii_tree.png"
 				siteUrl="https://ascii-tree-builder.yachim.cz/" ghUrl="https://github.com/yachim/ascii-tree-builder">
-				An app for creating ASCII file trees made with <em>Svelte</em>
-				and styled with <em>Tailwind CSS</em>.
-				State management was done with the help of <em>stores</em>.
+				<p>
+					An app for creating ASCII file trees made with <em>Svelte</em>
+					and styled with <em>Tailwind CSS</em>.
+					State management was done with the help of <em>stores</em>.
+				</p>
 			</OtherProjectItem>
 
 			<OtherProjectItem :order="2" name="Tower of Hanoi" image="/images/other_projects/hanoi.png"
 				siteUrl="https://towerofhanoi.yachim.cz/" ghUrl="https://github.com/Yachim/towerofhanoi/">
-				A famous mathematical puzzle called the
-				<em>Tower of Hanoi</em> built with <em>React</em>.
-				The app uses <em>SCSS</em> for styling.
-				<em>React Context</em> was used for state management.
+				<p>
+					A famous mathematical puzzle called the
+					Tower of Hanoi built with <em>React</em>.
+					The app uses <em>SCSS</em> for styling.
+					<em>React Context</em> was used for state management.
+				</p>
 			</OtherProjectItem>
 		</div>
 	</div>

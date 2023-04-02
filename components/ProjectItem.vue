@@ -23,9 +23,9 @@ const props = defineProps<{
 
 		<h4 class="grid-in-name text-accent text-xl">{{ props.name }}</h4>
 
-		<p class="project-desc grid-in-desc">
+		<div class="project-desc grid-in-desc">
 			<slot />
-		</p>
+		</div>
 
 		<div class="grid-in-links flex gap-2 links self-center">
 			<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
