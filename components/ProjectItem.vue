@@ -3,8 +3,8 @@ const props = defineProps<{
 	name: string;
 	image1: string;
 	image2: string;
-	siteUrl: string;
-	ghUrl: string;
+	siteUrl?: string;
+	ghUrl?: string;
 	align: "left" | "right";
 }>();
 </script>
@@ -28,9 +28,11 @@ const props = defineProps<{
 		</div>
 
 		<div class="grid-in-links flex gap-2 links self-center">
-			<SocialButton :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
-			<SocialButton :title="`${props.name}'s Site`" icon="fa-solid fa-arrow-up-right-from-square"
+			<slot name="extra-links-before"/>
+			<SocialButton v-if="props.ghUrl" :title="`${props.name}'s GitHub`" icon="fa-brands fa-github" :href="props.ghUrl" />
+			<SocialButton v-if="props.siteUrl" :title="`${props.name}'s Site`" icon="fa-solid fa-arrow-up-right-from-square"
 				:href="props.siteUrl" />
+			<slot name="extra-links-after"/>
 		</div>
 	</div>
 </template>

@@ -43,9 +43,6 @@ export default {
 		</label>
 		<input type="checkbox" class="hidden" id="nav-toggle" name="mobile-nav-visible" v-model="navBarShown" />
 		<nav class="flex gap-7 items-center grid-in-nav justify-between sm:justify-end">
-			<NuxtLink class="link" to="/blog">
-				Blog
-			</NuxtLink>
 			<a class="border-accent border-2 rounded-[3rem] p-3 px-7 border-r border-r-accent transition-colors hover:bg-accent duration-300 rounded-link"
 				href="mailto:jachym.kohout@gmail.com" target="_blank">
 				Email Me

@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 config.autoAddCss = false
 
 import { faChevronUp, faFloppyDisk, faArrowRight, faArrowUpRightFromSquare, faChevronLeft, faChevronRight, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-library.add(faFloppyDisk, faChevronUp, faGithub, faLinkedin, faArrowRight, faArrowUpRightFromSquare, faChevronLeft, faChevronRight, faEnvelope)
+import { faGithub, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons"
+library.add(faFloppyDisk, faChevronUp, faGithub, faLinkedin, faArrowRight, faArrowUpRightFromSquare, faChevronLeft, faChevronRight, faEnvelope, faYoutube)
 
 export default defineNuxtPlugin((nuxtApp) => {
 	nuxtApp.vueApp.component('font-awesome-icon', FontAwesomeIcon)
